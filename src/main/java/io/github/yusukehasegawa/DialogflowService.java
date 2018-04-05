@@ -1,4 +1,4 @@
-package com.github.YusukeHasegawa;
+package io.github.yusukehasegawa;
 
 import org.springframework.stereotype.Service;
 
