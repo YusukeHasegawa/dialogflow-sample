@@ -13,14 +13,14 @@ import ai.api.model.AIResponse;
 
 @Profile("!test")
 @SpringBootApplication
-public class DialogflowSampleApplication implements CommandLineRunner {
+public class SampleApplication implements CommandLineRunner {
 
 	private static final String INPUT_PROMPT = "> ";
 	private static final int ERROR_EXIT_CODE = 1;
 
 	private DialogflowService dialogflowService;
 
-	public DialogflowSampleApplication(DialogflowService dialogflowService) {
+	public SampleApplication(DialogflowService dialogflowService) {
 		super();
 		this.dialogflowService = dialogflowService;
 	}
@@ -56,7 +56,7 @@ public class DialogflowSampleApplication implements CommandLineRunner {
 		if (args.length < 1) {
 			showHelp("Please specify access token", ERROR_EXIT_CODE);
 		}
-		SpringApplication.run(DialogflowSampleApplication.class, args);
+		SpringApplication.run(SampleApplication.class, args);
 	}
 
 	private static void showHelp(String errorMessage, int exitCode) {
